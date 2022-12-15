@@ -1,5 +1,4 @@
 import pandas as pd
-import pprint
 import time 
 from datetime import timedelta
 
@@ -132,7 +131,7 @@ def untilAnomaly(traces,ip,labelStatus):
             if i==ip and values2[index]==labelStatus:
             
                 end_time = time.time()
-                print("time of  the execution of the until method at  : {} \n".format(end_time-start_time))
+                print("time of  the execution of the until method (s) : {} \n".format(end_time-start_time))
 
                 return 1/(index+1),dict(traces.iloc[index]) 
             else:
